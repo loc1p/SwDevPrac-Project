@@ -40,8 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# allow the env template
+.env*
 !.env.example
-
-# local test account passwords
-TEST_ACCOUNTS.md
