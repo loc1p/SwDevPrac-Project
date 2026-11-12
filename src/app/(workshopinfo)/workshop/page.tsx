@@ -1,4 +1,3 @@
-import ProductCard from "@/components/ProductCard";
 import getWorkshops from "@/libs/getWorkshops";
 import WorkshopCatalog from "@/components/WorkshopCatalog";
 import { LinearProgress } from "@mui/material";
