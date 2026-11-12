@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import getWorkshop from "@/libs/getWorkshop"
-import { formatWorkshopDate, getWorkshopImage, toDateString } from "@/libs/config";
+import { formatWorkshopDate, toDateString } from "@/libs/config";
 import WorkshopActions from "@/components/WorkshopActions";
 
 export default async function WorkshopDetailPage({params}:{params:Promise<{wid:string}>}){
