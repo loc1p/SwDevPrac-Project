@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import getWorkshop from "@/libs/getWorkshop"
-import { formatWorkshopDate, getWorkshopImage, toDateString } from "@/libs/config";
+import { formatWorkshopDate, toDateString } from "@/libs/config";
 import WorkshopActions from "@/components/WorkshopActions";
 
 export default async function WorkshopDetailPage({params}:{params:Promise<{wid:string}>}){
@@ -32,7 +31,6 @@ export default async function WorkshopDetailPage({params}:{params:Promise<{wid:s
                     <div className="text-md">Date : {formatWorkshopDate(workshop.workshopDate)}</div>
                     <div className="text-md">Location : {workshop.location}</div>
                     <div className="text-md">Capacity : {workshop.capacity}</div>
-                    {/* <div className="text-xs text-gray-500">Workshop ID : {workshop._id}</div> */}
                     <WorkshopActions isPast={isPast} item={{
                         workshopId: workshop._id,
                         workshopName: workshop.name,

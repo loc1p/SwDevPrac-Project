@@ -1,7 +1,7 @@
 import Link from "next/link"
 import ProductCard from "./ProductCard"
 import { WorkshopItem, WorkshopJson } from "../../interfaces"
-import { formatWorkshopDate, getWorkshopImage } from "@/libs/config"
+import { formatWorkshopDate} from "@/libs/config"
 
 export default async function WorkshopCatalog({workshopJson}:{workshopJson:Promise<WorkshopJson>}){
     let workshopJsonReady: WorkshopJson
