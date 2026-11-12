@@ -42,3 +42,11 @@ export interface CartItem {
     location: string
     instructor: string
 }
+export interface WorkshopInput{
+  name: string,
+  description: string,
+  instructor: string,
+  workshopDate: string,
+  location: string,
+  capacity: number
+}
