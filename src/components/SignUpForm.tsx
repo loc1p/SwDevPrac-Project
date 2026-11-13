@@ -3,7 +3,6 @@ import { useState } from "react"
 import Link from "next/link"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
-import { Select, MenuItem } from "@mui/material"
 import userRegister from "@/libs/userRegister"
 
 const inputClass = "block w-full text-gray-900 text-sm rounded-lg p-2 bg-purple-50 " +
@@ -14,7 +13,6 @@ export default function SignUpForm(){
     const [name,setName] = useState("")
     const [email,setEmail] = useState("")
     const [tel,setTel] = useState("")
-    const [role,setRole] = useState("member")
     const [password,setPassword] = useState("")
     const [error,setError] = useState("")
 
@@ -23,7 +21,7 @@ export default function SignUpForm(){
         setError("")
         if(password.length<6){ setError("Password must be at least 6 characters"); return }
         try{
-            await userRegister({name,email,tel,role,password})
+            await userRegister({name,email,tel,role:"member",password})
             // log in right after registering
             const result = await signIn("credentials",{email,password,redirect:false})
             router.push(result?.ok? "/" : "/signin")
@@ -45,11 +43,6 @@ export default function SignUpForm(){
             <label className="block text-sm text-gray-600">Tel
                 <input className={inputClass} type="tel" value={tel} onChange={(e)=>setTel(e.target.value)} required/>
             </label>
-            <div className="text-sm text-gray-600">Role</div>
-            <Select variant="standard" className="h-[2em] w-[200px]" value={role} onChange={(e)=>setRole(e.target.value)}>
-                <MenuItem value="member">Member</MenuItem>
-                <MenuItem value="admin">Admin</MenuItem>
-            </Select>
             <label className="block text-sm text-gray-600">Password
                 <input className={inputClass} type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required/>
             </label>
