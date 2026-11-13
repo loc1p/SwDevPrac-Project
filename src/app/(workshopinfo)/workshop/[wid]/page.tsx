@@ -31,6 +31,7 @@ export default async function WorkshopDetailPage({params}:{params:Promise<{wid:s
                     <div className="text-md">Date : {formatWorkshopDate(workshop.workshopDate)}</div>
                     <div className="text-md">Location : {workshop.location}</div>
                     <div className="text-md">Capacity : {workshop.capacity}</div>
+                    <div className="text-xs text-gray-500">Workshop ID : {workshop._id}</div>
                     <WorkshopActions isPast={isPast} item={{
                         workshopId: workshop._id,
                         workshopName: workshop.name,
