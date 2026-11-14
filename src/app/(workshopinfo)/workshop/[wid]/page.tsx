@@ -2,6 +2,7 @@ import Link from "next/link";
 import getWorkshop from "@/libs/getWorkshop"
 import { formatWorkshopDate, toDateString } from "@/libs/config";
 import WorkshopActions from "@/components/WorkshopActions";
+import WorkshopRegistrations from "@/components/WorkshopRegistrations";
 
 export default async function WorkshopDetailPage({params}:{params:Promise<{wid:string}>}){
     const { wid } = await params
@@ -41,6 +42,9 @@ export default async function WorkshopDetailPage({params}:{params:Promise<{wid:s
                     }}/>
                 </div>
             </div>
+            <div className="">
+            <WorkshopRegistrations workshopId={workshop._id} capacity={workshop.capacity}/>
+                    </div>
         </main>
     )
 }

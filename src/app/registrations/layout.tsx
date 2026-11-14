@@ -1,9 +1,9 @@
 import RegistrationMenu from "@/components/RegistrationMenu";
-import styles from "./registrations.module.css";
 
+// small screens: menu on top; md and up: menu on the left
 export default function RegistrationLayout({children}:{children:React.ReactNode}){
     return(
-        <div className={styles.sectionlayout}>
+        <div className="flex flex-col md:flex-row p-[10px]">
             <RegistrationMenu/>
             {children}
         </div>
