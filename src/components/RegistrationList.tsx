@@ -104,7 +104,7 @@ export default function RegistrationList(){
                         <div className="flex flex-row gap-3 my-2">
                             <button className={buttonClass} onClick={()=>{
                                 setEditingId(reg._id); setSelectedWorkshop(reg.workshop?._id ?? "")}}>
-                                Edit Workshop</button>
+                                Change Workshop</button>
                             <button className="block rounded-md bg-red-600 hover:bg-red-800 px-3 py-2 text-white"
                                 onClick={()=>onDelete(reg._id)}>Delete</button>
                         </div>
