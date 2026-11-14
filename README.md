@@ -99,5 +99,9 @@ public/img/                   Banner, card and logo images (SVG)
 
 ## Notes
 
-- The backend has no image field, so each workshop gets one of four placeholder pictures.
 - Workshop dates are stored as UTC midnight and shown as calendar dates in UTC.
+
+## Deployments
+
+- Frontend: https://sw-dev-prac-project-xi.vercel.app/
+- Backend: https://swdevprac2-project-backend-two.vercel.app/
